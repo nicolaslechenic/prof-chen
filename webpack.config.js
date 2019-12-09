@@ -42,8 +42,12 @@ let config = {
                 })
             },
             {
-                test: /\.(woff2?|eot|ttf|otf|wav)(\?.*)?$/,
-                loader: 'file-loader'
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'assets/fonts/'
+                }
             },
             {
                 test: /\.(png|svg|jpe?g|gif)(\?.*)?$/,

@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Select from 'react-select';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '../assets/styles/chen.scss'
+import '../assets/styles/chen.scss';
 
 const bgOptions = [
     { value: '1', label: 'Earth standard' },

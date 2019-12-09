@@ -3,10 +3,12 @@
   margin-top: 20px;
 
   &-text {
+  font-family: 'Press Start 2P', Arial, sans-serif;
     color: #FFF;
     top: 220px;
     left: 65px;
     width: 550px;
+    font-size: .9em;
   }
 }
 
@@ -25,3 +27,4 @@ textarea {
 .select {
   margin-top: 30px;
 }
+
