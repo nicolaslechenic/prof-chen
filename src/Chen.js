@@ -11,13 +11,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../assets/styles/chen.scss';
 
 const bgOptions = [
-    { value: '1', label: 'Earth standard' },
-    { value: '2', label: 'Earth burn' }
+    { value: 'earth-1', label: 'Earth standard' },
+    { value: 'earth-2', label: 'Earth burn' },
+    { value: 'manga-1', label: 'Manga' },
+    { value: 'manga-2', label: 'Gloups' },
+    { value: 'manga-3', label: 'Money' },
+    { value: 'paysage-1', label: 'Paysage' },
 ];
 
 const charactersOptions = [
-    { value: '1', label: 'Chen normal' },
-    { value: '2', label: 'Chen angry' }
+    { value: 'chen-1', label: 'Chen normal' },
+    { value: 'chen-2', label: 'Chen angry' },
+    { value: 'chen-3', label: 'Chen gloups' },
+    { value: 'chen-4', label: 'Chen afraid' },
+    { value: 'sensei-1', label: 'Sensei normal' }
 ];
 
 const textsOptions = [
@@ -72,8 +79,8 @@ class Chen extends Component {
             <Container>
                 <Row>
                     <Col sm={8}>
-                        <img className="msg" src={`./images/background/earth-${background}.png`} />
-                        <img className="msg" src={`./images/character/chen-${chen}.png`} />
+                        <img className="msg" src={`./images/background/${background}.png`} />
+                        <img className="msg" src={`./images/character/${chen}.png`} />
                         <img className="msg" src={`./images/textarea/text-${text}.png`} />
                         <p className="msg msg-text">{message}</p>
                     </Col>
@@ -84,18 +91,21 @@ class Chen extends Component {
                             onChange={this.handleChangeBackground}
                             options={bgOptions}
                             className='select'
+                            placeholder='Background'
                         />
                         <Select
                             value={chen}
                             onChange={this.handleChangeCharacter}
                             options={charactersOptions}
                             className='select'
+                            placeholder='Character'
                         />
                         <Select
                             value={text}
                             onChange={this.handleChangeText}
                             options={textsOptions}
                             className='select'
+                            placeholder='Textarea'
                         />
                         <br/>
                         <span className="section">Mon message</span>
